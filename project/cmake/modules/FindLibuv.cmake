@@ -64,6 +64,10 @@ set(Libuv_NAMES uv_a libuv_a uv libuv)
 # Try each search configuration.
 find_path(Libuv_INCLUDE_DIRS    NAMES uv.h            ${_LIBUV_SEARCH_ROOT_INC})
 find_library(Libuv_LIBRARIES    NAMES ${Libuv_NAMES}  ${_LIBUV_SEARCH_ROOT_LIB})
+message(status ${Libuv_NAMES} ${Libuv_INCLUDE_DIRS} )
+message(${_LIBUV_SEARCH_ROOT_LIB})
+message(status ${Libuv_LIBRARIES})
+
 
 mark_as_advanced(Libuv_INCLUDE_DIRS Libuv_LIBRARIES)
 
